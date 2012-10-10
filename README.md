@@ -11,7 +11,7 @@ How to use
 - Copy the demo-presentation.html file
 - Edit the source to make your presentaton
 - Add/update styles as you need them in style.css. 
-There are a cople of basic styles there already.
+There are a couple of basic styles there already.
 
 impress.js
 ----------------
