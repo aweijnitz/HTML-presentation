@@ -1,0 +1,142 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Presentation template based on impress.js</title>
+    
+    <meta name="description" content="Presentation template based on impress.js" />
+    <meta name="author" content="Anders Weijnitz" />
+
+    <!-- Fonts: 
+        Open Sans, PT Sans, headlines and for regular text, 
+        Vollkorn, for stand-outs, quotes etc. (in CSS font-family: 'Vollkorn', serif;)
+        Source code pro, for code and command lines (in CSS font-family: 'Source Code Pro', sans-serif;)
+    -->
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600' rel='stylesheet' type='text/css'>
+
+    <!--   
+        Template styles       
+    -->
+    <link href="css/styles.css" rel="stylesheet" />
+    
+    <link rel="shortcut icon" href="favicon.png" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+
+    <!--
+        
+        SUMMARY OF ALL THE POSSIBLE IMPRESS ATTRIBUTES 
+        
+        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+            the canvas in pixels; their default value is 0;
+
+        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+            are exactly the same;
+
+        * `data-scale` - defines the scale of step element; default value is 1
+
+
+        Coordinate system
+        X: Horizontal axis. Increasing from left to right.
+        Y: Vertical axis. Inrcreasing top to bottom.
+
+        Slide size: 900x700px
+        
+    -->
+ 
+<!-- START THE DECK-->
+<div id="impress" data-transition-duration="1000"> 
+
+    <!-- SLIDES
+        'step' is mandatory. Marks the different slides, or "steps" of you presentation
+        'id' is optional. Useful to target CSS styles for specific slides only
+        'slide' is just a style to give the step a slide feel. 
+    -->
+    <div id="first" class="step slide" data-x="-1000" data-y="-800">
+        <h1>h1 Headline for slide titles</h1>
+        <h2>h2 Sub heading</h2>
+        <div>Some regular text</div>
+        <h3>h3 Sub sub heading</h3>
+        <div>Some regular text</div>
+    </div>
+
+    <!-- SLIDE -->
+    <div class="step slide" data-x="-1000" data-y="0">
+        <h1>List with sub bullets</h1>
+        <dl>
+            <dt>Coffee</dt>
+                <dd>black hot drink</dd>
+                <dd>have three to six cups a day</dd>
+            <dt>Milk</dt>
+                <dd>white cold drink</dd>
+        </dl>
+    </div>
+
+    <!-- SLIDE -->
+    <div class="step slide" data-x="0" data-y="0" data-scale="0.6">
+        <h1>Basic list</h1>
+        <ul>
+            <li>This thing</li>
+            <li>That thing</li>
+            <li>Another thing</li>
+            <li>One more thing</li>
+        </ul>
+    </div>
+
+    <!-- SLIDE -->
+    <div class="step" data-x="850" data-y="6000" data-rotate="90" data-scale="7">
+        <div class="quote">Ah, sod it!<br>Let's cross the Rubicon already!
+            <div class="quote_by">Some guy</div>
+        </div>
+    </div>
+
+    <!-- SLIDE -->
+    <div class="step slide two-col" data-x="5500" data-y="6000" data-rotate-z="-45" data-rotate-x="90" data-scale="2">
+        <h1>A two-column layout, using style <em>two-col</em></h1>
+        <div><h2>First column</h2>
+            Some text or images.
+        </div>
+        <div><h2><em>source</em> style</h2>
+            <p class="source">
+                irb(main):002:0> puts "Hello World"<br>Hello World<br>=> nil
+            </p>
+        </div>
+    </div>
+
+
+    <!-- CLOSING SLIDE. ZOOM OUT TO AN OVERVIEW -->
+    <div id="overview" class="step" data-x="3000" data-y="3500" data-scale="20">
+    </div>
+
+<!-- CLOSING THE DECK-->
+</div>
+
+<div class="hint">
+    <p>Use a spacebar or arrow keys to navigate</p>
+</div>
+<script>
+if ("ontouchstart" in document.documentElement) { 
+    document.querySelector(".hint").innerHTML = "<p>Tap on the left or right to navigate</p>";
+}
+</script>
+
+
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
