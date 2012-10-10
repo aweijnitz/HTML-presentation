@@ -2,7 +2,7 @@ impress.js blueprint
 =====================
 
 This is a blueprint HTML presentation deck based on impress.js.
-Open the demo-presentation.html file in a (modern) browser to see what it does.
+Open the file 'demo-presentation.html' in a (modern) browser to see what it does.
 
 How to use
 ----------------
